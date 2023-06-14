@@ -15,7 +15,7 @@ namespace OnlineShopPoc
             return _products;
         }
 
-        public void AddProduct(string key, Product product)
+        public Task AddProduct(string key, Product product)
         {
             if (product is null) throw new ArgumentException(nameof(product));
             if (!_products.TryAdd(key, product))
@@ -34,7 +34,7 @@ namespace OnlineShopPoc
             }
             throw new ArgumentException(nameof(id));
         }
-        public void DeleteProduct(Guid productId)
+        public Task DeleteProduct(Guid productId)
         {
             foreach (var product in _products)
             {
@@ -46,7 +46,7 @@ namespace OnlineShopPoc
             throw new ArgumentException(nameof(productId));
         }
 
-        public void UpdateProduct(Guid productId, Product newProduct)
+        public Task UpdateProduct(Guid productId, Product newProduct)
         {
             if (newProduct is null) throw new ArgumentException(nameof(newProduct));
             foreach (var product in _products)

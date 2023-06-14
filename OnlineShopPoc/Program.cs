@@ -1,4 +1,5 @@
 using OnlineShopPoc;
+using System.Collections.Concurrent;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
@@ -6,7 +7,12 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
    {
        options.SerializerOptions.WriteIndented = true;
    });
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
+
 Catalog catalog = new Catalog();
 
 //RPC
@@ -24,14 +30,14 @@ app.MapPost("/products/product", AddProduct);
 app.MapDelete("/products/{productId}", DeleteProduct);
 app.MapPut("/products/{productId}", UpdateProduct);
 
-List<Product> GetProducts()
+ConcurrentDictionary<string, Product> GetProducts()
 {
     return catalog.GetProducts();
 }
-IResult AddProduct(Product product)
+IResult AddProduct(string key,Product product)
 {
     if (product is null) throw new ArgumentException(nameof(product));
-    catalog.AddProduct(product);
+    catalog.AddProduct(key,product);
     return Results.Created($"/products/{product.Id}", product); 
 }
 Product GetProductById(Guid id)

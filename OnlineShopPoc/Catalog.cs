@@ -1,44 +1,49 @@
-﻿namespace OnlineShopPoc
+﻿using System.Collections.Concurrent;
+
+namespace OnlineShopPoc
 {
     public class Catalog
     {
-        private List<Product> _products;
+        private ConcurrentDictionary<string, Product> _products;
         public Catalog()
         {
             _products = GenerateProducts(10); 
         }
 
-        public List<Product> GetProducts()
+        public ConcurrentDictionary<string, Product> GetProducts()
         {
             return _products;
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(string key, Product product)
         {
             if (product is null) throw new ArgumentException(nameof(product));
-            _products.Add(product);
+            if (!_products.TryAdd(key, product))
+            {
+                throw new ArgumentException(nameof(key));
+            }
         }
         public Product GetProduct(Guid id)
         {
             foreach (var product in _products)
             {
-                if (product.Id == id)
+                if (product.Value.Id == id)
                 {
-                    return product; 
+                    return product.Value;
                 }
             }
-            throw new ArgumentException($"Продукта с ID={id} не существует!") ;    
+            throw new ArgumentException(nameof(id));
         }
-        public bool DeleteProduct(Guid productId)
+        public void DeleteProduct(Guid productId)
         {
             foreach (var product in _products)
             {
-                if (product.Id == productId)
+                if (product.Value.Id == productId)
                 {
-                    return _products.Remove(product);
+                    _products.TryRemove(product);
                 }
             }
-            return false; 
+            throw new ArgumentException(nameof(productId));
         }
 
         public void UpdateProduct(Guid productId, Product newProduct)
@@ -46,28 +51,26 @@
             if (newProduct is null) throw new ArgumentException(nameof(newProduct));
             foreach (var product in _products)
             {
-                if (product.Id == productId)
+                if (product.Value.Id == productId)
                 {
-                    product.Name = newProduct.Name;
-                    product.Price = newProduct.Price;
-                    product.ExpiredAt = newProduct.ExpiredAt;
-                    product.ProducedAt = newProduct.ProducedAt;
-                    product.Description = newProduct.Description;
-                }
-                else
-                {
-                    throw new ArgumentException($"Продукта с ID={productId} не существует!");
+                    product.Value.Name = newProduct.Name;
+                    product.Value.Price = newProduct.Price;
+                    product.Value.ExpiredAt = newProduct.ExpiredAt;
+                    product.Value.ProducedAt = newProduct.ProducedAt;
+                    product.Value.Description = newProduct.Description;
                 }
             }
+            throw new ArgumentException(nameof(productId));
         }
 
         public void ClearCatalog()
         {
             _products.Clear();
         }
-        private static List<Product> GenerateProducts(int count)
+        private static ConcurrentDictionary<string,Product> GenerateProducts(int count)
         {
             var random = new Random();
+            var productDictionary = new ConcurrentDictionary<string, Product>();
             var products = new Product[count];
 
             // Массив реальных названий товаров
@@ -85,8 +88,6 @@
             "Сыр"
             };
 
-
-
             for (int i = 0; i < count; i++)
             {
                 var name = productNames[i];
@@ -97,16 +98,18 @@
 
                 products[i] = new Product(name, price)
                 {
-                    Id = Guid.NewGuid(), 
+                    Id = Guid.NewGuid(),
                     Description = "Описание " + name,
                     ProducedAt = producedAt,
                     ExpiredAt = expiredAt
                 };
             }
 
-
-
-            return products.ToList();
+            for (int i = 0; i < products.Length; i++)
+            {
+                productDictionary.TryAdd(Guid.NewGuid().ToString(), products[i]);
+            }
+            return productDictionary;
         }
     }
 }

@@ -22,6 +22,7 @@ namespace OnlineShopPoc
             {
                 throw new ArgumentException(nameof(key));
             }
+            return Task.CompletedTask; 
         }
         public Product GetProduct(Guid id)
         {
@@ -34,7 +35,7 @@ namespace OnlineShopPoc
             }
             throw new ArgumentException(nameof(id));
         }
-        public Task DeleteProduct(Guid productId)
+        public void DeleteProduct(Guid productId)
         {
             foreach (var product in _products)
             {
@@ -46,7 +47,7 @@ namespace OnlineShopPoc
             throw new ArgumentException(nameof(productId));
         }
 
-        public Task UpdateProduct(Guid productId, Product newProduct)
+        public void UpdateProduct(Guid productId, Product newProduct)
         {
             if (newProduct is null) throw new ArgumentException(nameof(newProduct));
             foreach (var product in _products)

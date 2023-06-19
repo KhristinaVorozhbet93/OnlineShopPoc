@@ -1,10 +1,9 @@
 using OnlineShopPoc;
 
-//отправлять сообщения каждый час
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<ICatalog,InMemoryCatalog>();
 //builder.Services.AddSingleton<IEmailSender, MailKitSmtpEmailSender>();
 builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
 builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
@@ -17,8 +16,6 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
-
-Catalog catalog = new Catalog();
 
 //RPC
 app.MapGet("/get_products", GetProducts);
@@ -35,30 +32,30 @@ app.MapPost("/products/product", AddProduct);
 app.MapDelete("/products/{productId}", DeleteProduct);
 app.MapPut("/products/{productId}", UpdateProduct);
 
-List<Product> GetProducts()
+List<Product> GetProducts(ICatalog catalog)
 {
     return catalog.GetProducts();
 }
-IResult AddProduct(Product product)
+IResult AddProduct(Product product, ICatalog catalog)
 {
     if (product is null) throw new ArgumentException(nameof(product));
     catalog.AddProduct(product);
     return Results.Created($"/products/{product.Id}", product);
 }
-Product GetProductById(Guid id)
+Product GetProductById(Guid id, ICatalog catalog)
 {
     return catalog.GetProduct(id);
 }
-void DeleteProduct(Guid productId)
+void DeleteProduct(Guid productId, ICatalog catalog)
 {
     catalog.DeleteProduct(productId);
 }
-void UpdateProduct(Guid productId, Product newProduct)
+void UpdateProduct(Guid productId, Product newProduct, ICatalog catalog)
 {
     if (newProduct is null) throw new ArgumentException(nameof(newProduct));
     catalog.UpdateProduct(productId, newProduct);
 }
-void ClearCatalog()
+void ClearCatalog(ICatalog catalog)
 {
     catalog.ClearCatalog();
 }

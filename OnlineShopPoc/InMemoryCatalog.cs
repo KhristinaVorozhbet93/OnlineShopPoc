@@ -2,13 +2,13 @@
 
 namespace OnlineShopPoc
 {
-    public class Catalog
+    public class InMemoryCatalog : ICatalog
     {
         private object _productsSyncObj = new (); 
 
         private List<Product> _products;
 
-        public Catalog()
+        public InMemoryCatalog()
         {
             _products = GenerateProducts(10); 
         }
@@ -41,7 +41,7 @@ namespace OnlineShopPoc
                     }        
                 }
             }
-            throw new ArgumentException(nameof(id));
+            throw new ArgumentException($"Продукта с ID={id} не существует!");
         }
         public void DeleteProduct(Guid productId)
         {
@@ -55,7 +55,7 @@ namespace OnlineShopPoc
                     }
                 }
             }
-            throw new ArgumentException(nameof(productId));
+            throw new ArgumentException($"Продукта с ID={productId} не существует!");
         }
 
         public void UpdateProduct(Guid productId, Product newProduct)
@@ -91,7 +91,6 @@ namespace OnlineShopPoc
         private static List<Product> GenerateProducts(int count)
         {
             var random = new Random();
-            var productDictionary = new ConcurrentDictionary<string, Product>();
             var products = new Product[count];
 
             // Массив реальных названий товаров
@@ -125,8 +124,6 @@ namespace OnlineShopPoc
                     ExpiredAt = expiredAt
                 };
             }
-
-
             return products.ToList();
         }
     }

@@ -1,10 +1,13 @@
-﻿namespace OnlineShopPoc
+﻿using System.Collections.Concurrent;
+
+namespace OnlineShopPoc
 {
     public class Catalog
     {
         private object _productsSyncObj = new (); 
 
         private List<Product> _products;
+
         public Catalog()
         {
             _products = GenerateProducts(10); 
@@ -38,9 +41,9 @@
                     }        
                 }
             }
-            throw new ArgumentException($"Продукта с ID={id} не существует!") ;    
+            throw new ArgumentException(nameof(id));
         }
-        public bool DeleteProduct(Guid productId)
+        public void DeleteProduct(Guid productId)
         {
             foreach (var product in _products)
             {
@@ -48,11 +51,11 @@
                 {
                     lock (_productsSyncObj)
                     {
-                        return _products.Remove(product);
+                        _products.Remove(product);
                     }
                 }
             }
-            return false; 
+            throw new ArgumentException(nameof(productId));
         }
 
         public void UpdateProduct(Guid productId, Product newProduct)
@@ -69,8 +72,7 @@
                         product.ExpiredAt = newProduct.ExpiredAt;
                         product.ProducedAt = newProduct.ProducedAt;
                         product.Description = newProduct.Description;
-                    }
-           
+                    } 
                 }
                 else
                 {
@@ -89,6 +91,7 @@
         private static List<Product> GenerateProducts(int count)
         {
             var random = new Random();
+            var productDictionary = new ConcurrentDictionary<string, Product>();
             var products = new Product[count];
 
             // Массив реальных названий товаров
@@ -116,12 +119,13 @@
 
                 products[i] = new Product(name, price)
                 {
-                    Id = Guid.NewGuid(), 
+                    Id = Guid.NewGuid(),
                     Description = "Описание " + name,
                     ProducedAt = producedAt,
                     ExpiredAt = expiredAt
                 };
             }
+
 
             return products.ToList();
         }

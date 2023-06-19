@@ -2,6 +2,8 @@
 {
     public class Catalog
     {
+        private object _productsSyncObj = new (); 
+
         private List<Product> _products;
         public Catalog()
         {
@@ -10,13 +12,19 @@
 
         public List<Product> GetProducts()
         {
-            return _products;
+            lock (_productsSyncObj)
+            {
+                return _products;
+            }         
         }
 
         public void AddProduct(Product product)
         {
-            if (product is null) throw new ArgumentException(nameof(product));
-            _products.Add(product);
+            ArgumentException.ThrowIfNullOrEmpty(nameof(product));
+            lock (_productsSyncObj)
+            {
+                _products.Add(product);
+            }     
         }
         public Product GetProduct(Guid id)
         {
@@ -24,7 +32,10 @@
             {
                 if (product.Id == id)
                 {
-                    return product; 
+                    lock (_productsSyncObj)
+                    {
+                        return product;
+                    }        
                 }
             }
             throw new ArgumentException($"Продукта с ID={id} не существует!") ;    
@@ -35,7 +46,10 @@
             {
                 if (product.Id == productId)
                 {
-                    return _products.Remove(product);
+                    lock (_productsSyncObj)
+                    {
+                        return _products.Remove(product);
+                    }
                 }
             }
             return false; 
@@ -43,16 +57,20 @@
 
         public void UpdateProduct(Guid productId, Product newProduct)
         {
-            if (newProduct is null) throw new ArgumentException(nameof(newProduct));
+            ArgumentException.ThrowIfNullOrEmpty(nameof(newProduct));
             foreach (var product in _products)
             {
                 if (product.Id == productId)
                 {
-                    product.Name = newProduct.Name;
-                    product.Price = newProduct.Price;
-                    product.ExpiredAt = newProduct.ExpiredAt;
-                    product.ProducedAt = newProduct.ProducedAt;
-                    product.Description = newProduct.Description;
+                    lock (_productsSyncObj)
+                    {
+                        product.Name = newProduct.Name;
+                        product.Price = newProduct.Price;
+                        product.ExpiredAt = newProduct.ExpiredAt;
+                        product.ProducedAt = newProduct.ProducedAt;
+                        product.Description = newProduct.Description;
+                    }
+           
                 }
                 else
                 {
@@ -63,7 +81,10 @@
 
         public void ClearCatalog()
         {
-            _products.Clear();
+            lock (_productsSyncObj)
+            {
+                _products.Clear();
+            }          
         }
         private static List<Product> GenerateProducts(int count)
         {
@@ -85,8 +106,6 @@
             "Сыр"
             };
 
-
-
             for (int i = 0; i < count; i++)
             {
                 var name = productNames[i];
@@ -103,8 +122,6 @@
                     ExpiredAt = expiredAt
                 };
             }
-
-
 
             return products.ToList();
         }

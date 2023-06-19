@@ -1,12 +1,23 @@
 using OnlineShopPoc;
 
+//отправлять сообщения каждый час
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+//builder.Services.AddSingleton<IEmailSender, MailKitSmtpEmailSender>();
+builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
+builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
+
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
    options =>
    {
        options.SerializerOptions.WriteIndented = true;
    });
 var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
+
 Catalog catalog = new Catalog();
 
 //RPC
@@ -32,7 +43,7 @@ IResult AddProduct(Product product)
 {
     if (product is null) throw new ArgumentException(nameof(product));
     catalog.AddProduct(product);
-    return Results.Created($"/products/{product.Id}", product); 
+    return Results.Created($"/products/{product.Id}", product);
 }
 Product GetProductById(Guid id)
 {

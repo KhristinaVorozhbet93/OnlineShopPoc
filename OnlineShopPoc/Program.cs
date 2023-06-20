@@ -4,9 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ICatalog,InMemoryCatalog>();
-//builder.Services.AddSingleton<IEmailSender, MailKitSmtpEmailSender>();
 builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
 builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
+builder.Services.AddHostedService<SalesNotificatorBackgroundService>();
 
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
    options =>

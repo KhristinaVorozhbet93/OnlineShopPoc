@@ -1,4 +1,5 @@
 ﻿using MailKit.Net.Smtp;
+using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
 using System.Net;
@@ -8,9 +9,13 @@ namespace OnlineShopPoc
     public class MailKitSmtpEmailSender : IEmailSender, IAsyncDisposable
     {
         private readonly SmtpClient _smtpClient = new();
-        private readonly string _emailPassword = Environment.GetEnvironmentVariable("emailPassword") ??
-            throw new ArgumentNullException(nameof(_emailPassword));
+        private readonly SmtpConfig _smtpConfig;
 
+        public MailKitSmtpEmailSender(IOptions<SmtpConfig> options)
+        {
+            ArgumentNullException.ThrowIfNull(options); 
+           _smtpConfig= options.Value;
+        }
         public async ValueTask DisposeAsync()
         {
             await _smtpClient.DisconnectAsync(true);
@@ -21,11 +26,11 @@ namespace OnlineShopPoc
         {
             if (!_smtpClient.IsConnected)
             {
-                await _smtpClient.ConnectAsync("smtp.beget.com", 25);
+                await _smtpClient.ConnectAsync(_smtpConfig.Host, _smtpConfig.Port);
             }
             if (!_smtpClient.IsAuthenticated)
             {
-                await _smtpClient.AuthenticateAsync("asp2023pv112@rodion-m.ru", _emailPassword);
+                await _smtpClient.AuthenticateAsync(_smtpConfig.UserName, _smtpConfig.Password);
             }
         }
         public async Task SendEmailAsync(string recepientEmail, string subject, string message)
@@ -41,7 +46,7 @@ namespace OnlineShopPoc
                 {
                     Text = message,
                 },
-                From = { MailboxAddress.Parse("asp2023pv112@rodion-m.ru") },
+                From = { MailboxAddress.Parse(_smtpConfig.UserName) },
                 To = { MailboxAddress.Parse(recepientEmail) },
             };
 

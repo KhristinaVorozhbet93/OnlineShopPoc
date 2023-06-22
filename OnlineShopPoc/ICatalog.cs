@@ -2,7 +2,7 @@
 {
     public interface ICatalog
     {
-        List<Product> GetProducts();
+        List<Product> GetProducts(IClock clock);
         void AddProduct(Product product);
         Product GetProduct(Guid id);
         void DeleteProduct(Guid productId);

@@ -1,24 +1,22 @@
-﻿using System.Collections.Concurrent;
-
-namespace OnlineShopPoc
+﻿namespace OnlineShopPoc
 {
     public class InMemoryCatalog : ICatalog
     {
-        private object _productsSyncObj = new (); 
+        private object _productsSyncObj = new();
 
         private List<Product> _products;
 
         public InMemoryCatalog()
         {
-            _products = GenerateProducts(10); 
+            _products = GenerateProducts(10);
         }
 
-        public List<Product> GetProducts()
+        public List<Product> GetProducts(IClock clock)
         {
             lock (_productsSyncObj)
             {
                 return _products;
-            }         
+            }
         }
 
         public void AddProduct(Product product)
@@ -27,7 +25,7 @@ namespace OnlineShopPoc
             lock (_productsSyncObj)
             {
                 _products.Add(product);
-            }     
+            }
         }
         public Product GetProduct(Guid id)
         {
@@ -38,7 +36,7 @@ namespace OnlineShopPoc
                     lock (_productsSyncObj)
                     {
                         return product;
-                    }        
+                    }
                 }
             }
             throw new ArgumentException($"Продукта с ID={id} не существует!");
@@ -72,7 +70,7 @@ namespace OnlineShopPoc
                         product.ExpiredAt = newProduct.ExpiredAt;
                         product.ProducedAt = newProduct.ProducedAt;
                         product.Description = newProduct.Description;
-                    } 
+                    }
                 }
                 else
                 {
@@ -86,14 +84,13 @@ namespace OnlineShopPoc
             lock (_productsSyncObj)
             {
                 _products.Clear();
-            }          
+            }
         }
         private static List<Product> GenerateProducts(int count)
         {
             var random = new Random();
             var products = new Product[count];
 
-            // Массив реальных названий товаров
             var productNames = new string[]
             {
             "Молоко",

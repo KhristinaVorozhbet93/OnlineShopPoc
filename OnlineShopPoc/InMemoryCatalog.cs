@@ -13,10 +13,36 @@
 
         public List<Product> GetProducts(IClock clock)
         {
-            lock (_productsSyncObj)
+            ArgumentNullException.ThrowIfNull(clock);
+
+            if (clock.GetTimeUtc().DayOfWeek == DayOfWeek.Monday)
             {
-                return _products;
+                lock (_productsSyncObj)
+                {
+                    List<Product> salesProducts = new();
+
+                    for (int i = 0; i < _products.Count; i++)
+                    {
+                        salesProducts.Add(new Product(_products[i].Name,
+                            Math.Floor(_products[i].Price - (_products[i].Price / 100 * 30)))
+                        {
+                            Id = _products[i].Id,
+                            Description = _products[i].Description,
+                            ExpiredAt = _products[i].ExpiredAt,
+                            ProducedAt = _products[i].ProducedAt
+                        });
+                    }
+                    return salesProducts;
+                }
             }
+            else
+            {
+                lock (_productsSyncObj)
+                {
+                    return _products;
+                }
+            }
+            throw new ArgumentNullException(nameof(_products));
         }
 
         public void AddProduct(Product product)
@@ -27,20 +53,38 @@
                 _products.Add(product);
             }
         }
-        public Product GetProduct(Guid id)
+        public Product GetProduct(Guid id, IClock clock)
         {
-            foreach (var product in _products)
+            ArgumentNullException.ThrowIfNull(clock);
+            for (int i = 0; i < _products.Count; i++)
             {
-                if (product.Id == id)
+                if (_products[i].Id == id)
                 {
-                    lock (_productsSyncObj)
+                    if (clock.GetTimeUtc().DayOfWeek == DayOfWeek.Monday)
                     {
-                        return product;
+                        lock (_productsSyncObj)
+                        {
+                            Product saleProduct = new Product(_products[i].Name,
+                                Math.Floor(_products[i].Price - (_products[i].Price / 100 * 30)))
+                            {
+                                Id = _products[i].Id,
+                                Description = _products[i].Description,
+                                ExpiredAt = _products[i].ExpiredAt,
+                                ProducedAt = _products[i].ProducedAt
+                            };
+                            return saleProduct;
+                        }
+                    }
+                    else
+                    {
+                        return _products[i];
                     }
                 }
             }
             throw new ArgumentException($"Продукта с ID={id} не существует!");
         }
+
+
         public void DeleteProduct(Guid productId)
         {
             foreach (var product in _products)

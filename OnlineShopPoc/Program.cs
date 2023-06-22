@@ -49,9 +49,9 @@ IResult AddProduct(Product product, ICatalog catalog)
     catalog.AddProduct(product);
     return Results.Created($"/products/{product.Id}", product);
 }
-Product GetProductById(Guid id, ICatalog catalog)
+Product GetProductById(Guid id, ICatalog catalog, IClock clock)
 {
-    return catalog.GetProduct(id);
+    return catalog.GetProduct(id, clock);
 }
 void DeleteProduct(Guid productId, ICatalog catalog)
 {

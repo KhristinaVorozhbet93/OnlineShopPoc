@@ -7,9 +7,10 @@ builder.Services.AddOptions<SmtpConfig>()
     .BindConfiguration("SmtpConfig")
    .ValidateDataAnnotations()
    .ValidateOnStart();
+builder.Configuration.GetSection("SmtpConfig").Get<SmtpConfig>();
 builder.Services.AddSingleton<ICatalog,InMemoryCatalog>();
 builder.Services.AddSingleton<IClock, Clock>();
-builder.Services.AddSingleton<IEmailSender, MailKitSmtpEmailSender>();
+builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
 builder.Services.Decorate<IEmailSender, EmailSenderLoggingDecorator>();
 builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
 //builder.Services.AddHostedService<SalesNotificatorBackgroundService>();
@@ -21,6 +22,7 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
 
 
 var app = builder.Build();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
@@ -32,6 +34,7 @@ app.MapPost("/delete_product", DeleteProduct);
 app.MapPost("/update_product", UpdateProduct);
 app.MapPost("/clear_products", ClearCatalog);
 app.MapGet("/get_date", GetDateUtc);
+app.MapPost("/send_email", SendEmail);
 
 //REST
 app.MapGet("/products", GetProducts);
@@ -39,6 +42,15 @@ app.MapGet("/productById", GetProductById);
 app.MapPost("/products/product", AddProduct);
 app.MapDelete("/products/{productId}", DeleteProduct);
 app.MapPut("/products/{productId}", UpdateProduct);
+
+
+ async Task SendEmail(IEmailSender emailSender, string email, string subject, string message)
+{
+    ArgumentNullException.ThrowIfNull(email);
+    ArgumentNullException.ThrowIfNull(subject);
+    ArgumentNullException.ThrowIfNull(message);
+    await emailSender.SendEmailAsync(email, subject, message);
+}
 
 List<Product> GetProducts(ICatalog catalog, IClock clock)
 {

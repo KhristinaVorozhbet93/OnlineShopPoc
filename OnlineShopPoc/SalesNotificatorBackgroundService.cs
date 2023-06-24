@@ -32,7 +32,7 @@ namespace OnlineShopPoc
             {
                 sw.Restart();
                 await emailSender.SendEmailAsync(user.email, "Промоакции", "Список акций");
-                _logger.LogInformation($"Email sent to {user.email} in {sw.ElapsedMilliseconds} ms");
+                _logger.LogInformation("Email sent to {email} in {ElapsedMilliseconds} ms", user.email, sw.ElapsedMilliseconds);
             }
         }
     }

@@ -11,7 +11,7 @@ namespace OnlineShopPoc
         private readonly SmtpClient _smtpClient = new();
         private readonly SmtpConfig _smtpConfig;
 
-        public MailKitSmtpEmailSender(IOptions <SmtpConfig> options)
+        public MailKitSmtpEmailSender(IOptionsSnapshot <SmtpConfig> options)
         {
             ArgumentNullException.ThrowIfNull(options); 
            _smtpConfig= options.Value;

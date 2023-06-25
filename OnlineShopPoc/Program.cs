@@ -20,9 +20,7 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
        options.SerializerOptions.WriteIndented = true;
    });
 
-
 var app = builder.Build();
-
 app.UseSwagger();
 app.UseSwaggerUI();
 

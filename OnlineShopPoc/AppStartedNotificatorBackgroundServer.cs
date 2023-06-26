@@ -13,14 +13,34 @@
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            int attempt = 2;
+            bool isSend = false;
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 await using (var scope = _serviceProvider.CreateAsyncScope())
                 {
                     var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
-
-                    await emailSender.SendEmailAsync
-                        ("ptykhina.khristi@mail.ru", "Приложение запущено", "Приложение запущено!");
+                    for (int i = 0; i < attempt && isSend == false; i++)
+                    {
+                        try
+                        {
+                            await emailSender.SendEmailAsync
+                                ("ptykhina.khristi@mail.ru", "Приложение запущено", "Приложение запущено!");
+                            isSend = true;
+                        }
+                        catch (Exception e)
+                        {
+                            if (i == 0)
+                            {
+                                _logger.LogWarning(e, "Сообщение не отправлено!");
+                            }
+                            else
+                            {
+                                _logger.LogError(e, "Сообщение не отправлено повторно!");
+                            }
+                        }
+                    }
                     await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
                 }
             }

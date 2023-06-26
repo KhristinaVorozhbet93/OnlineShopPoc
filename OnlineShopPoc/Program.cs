@@ -27,7 +27,7 @@ try
     builder.Services.AddSingleton<ICatalog, InMemoryCatalog>();
     builder.Services.AddSingleton<IClock, Clock>();
     builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
-    builder.Services.Decorate<IEmailSender, EmailSenderLoggingDecorator>();
+    //builder.Services.Decorate<IEmailSender, EmailSenderLoggingDecorator>();
     builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
     //builder.Services.AddHostedService<SalesNotificatorBackgroundService>();
     builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
@@ -68,8 +68,6 @@ finally
     Log.Information("Shut down complete");
     await Log.CloseAndFlushAsync();
 }
-
-
 async Task SendEmail(IEmailSender emailSender, string email, string subject, string message)
 {
     ArgumentNullException.ThrowIfNull(email);

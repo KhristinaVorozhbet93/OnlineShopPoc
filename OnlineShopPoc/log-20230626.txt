@@ -44,3 +44,330 @@
 2023-06-26 15:24:21.711 +04:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
 2023-06-26 15:24:21.713 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/favicon-32x32.png - - - 200 628 image/png 21.8218ms
 2023-06-26 15:24:21.980 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 304.0417ms
+2023-06-26 15:39:12.634 +04:00 [INF] Сервер запущен!
+2023-06-26 15:39:12.766 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:39:13.147 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:39:13.151 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:39:13.153 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:39:13.154 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:39:13.154 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:39:14.179 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:39:14.628 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:39:14.632 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:39:14.634 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 457.8395ms
+2023-06-26 15:39:14.644 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 10.4948ms
+2023-06-26 15:39:14.667 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.4006ms
+2023-06-26 15:39:15.268 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:39:15.291 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:39:15.543 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 274.9996ms
+2023-06-26 15:39:28.057 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:39:28.079 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 21.8488ms
+2023-06-26 15:39:28.133 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:39:28.134 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:39:28.137 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.8596ms
+2023-06-26 15:39:28.156 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.1285ms
+2023-06-26 15:39:28.321 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:39:28.332 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.5927ms
+2023-06-26 15:39:53.003 +04:00 [INF] Сервер запущен!
+2023-06-26 15:39:53.099 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:39:53.477 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:39:53.480 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:39:53.481 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:39:53.483 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:39:53.483 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:39:53.912 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:39:54.414 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 504.1666ms
+2023-06-26 15:39:54.571 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:39:54.778 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 203.9547ms
+2023-06-26 15:39:55.004 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:39:55.013 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 8.7811ms
+2023-06-26 15:39:55.243 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:39:55.263 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:39:55.637 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 393.9005ms
+2023-06-26 15:41:22.451 +04:00 [INF] Сервер запущен!
+2023-06-26 15:41:22.590 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:41:22.982 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:41:22.987 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:41:22.998 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:41:23.000 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:41:23.004 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:41:23.521 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:41:24.183 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 665.3761ms
+2023-06-26 15:41:24.246 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:41:24.246 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:41:24.256 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 9.2664ms
+2023-06-26 15:41:24.316 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.5249ms
+2023-06-26 15:41:24.968 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:41:24.989 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:41:25.421 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 452.0979ms
+2023-06-26 15:44:19.751 +04:00 [INF] Сервер запущен!
+2023-06-26 15:44:19.887 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:44:20.304 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:44:20.308 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:44:20.310 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:44:20.312 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:44:20.313 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:44:20.844 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:44:21.535 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 693.5389ms
+2023-06-26 15:44:21.571 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:44:21.572 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:44:21.584 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 11.8287ms
+2023-06-26 15:44:21.625 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.3239ms
+2023-06-26 15:44:22.211 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:44:22.233 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:44:22.793 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 582.5908ms
+2023-06-26 15:45:09.264 +04:00 [INF] Сервер запущен!
+2023-06-26 15:45:09.339 +04:00 [FTL] Сервер рухнул!
+Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'SmtpConfig' members: 'Host' with the error: 'The Host field is required.'.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\OnlineShopPoc\OnlineShopPoc\Program.cs:line 60
+2023-06-26 15:45:09.391 +04:00 [INF] Shut down complete
+2023-06-26 15:45:15.070 +04:00 [INF] Сервер запущен!
+2023-06-26 15:45:15.129 +04:00 [FTL] Сервер рухнул!
+Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'SmtpConfig' members: 'Host' with the error: 'The Host field is required.'.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\OnlineShopPoc\OnlineShopPoc\Program.cs:line 60
+2023-06-26 15:45:15.177 +04:00 [INF] Shut down complete
+2023-06-26 15:45:41.025 +04:00 [INF] Сервер запущен!
+2023-06-26 15:45:41.269 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:45:41.624 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:45:41.628 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:45:41.630 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:45:41.632 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:45:41.633 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:45:42.450 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:45:43.297 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 855.2579ms
+2023-06-26 15:45:43.398 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:45:43.401 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:45:43.466 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 65.0214ms
+2023-06-26 15:45:43.600 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 198.0799ms
+2023-06-26 15:45:44.102 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:45:44.122 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:45:44.431 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 329.7657ms
+2023-06-26 15:51:28.081 +04:00 [INF] Сервер запущен!
+2023-06-26 15:51:28.263 +04:00 [FTL] Сервер рухнул!
+Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'SmtpConfig' members: 'Password' with the error: 'The Password field is required.'.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.Extensions.DependencyInjection.OptionsBuilderExtensions.<>c__DisplayClass0_1`1.<ValidateOnStart>b__1()
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.Extensions.DependencyInjection.ValidationHostedService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\OnlineShopPoc\OnlineShopPoc\Program.cs:line 60
+2023-06-26 15:51:28.371 +04:00 [INF] Shut down complete
+2023-06-26 15:53:55.442 +04:00 [INF] Сервер запущен!
+2023-06-26 15:53:55.581 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:53:56.244 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:53:56.270 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:53:56.291 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:53:56.292 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:53:56.293 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:53:57.876 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:53:59.033 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1162.8476ms
+2023-06-26 15:53:59.104 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:53:59.122 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:53:59.223 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 116.5610ms
+2023-06-26 15:53:59.360 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 237.6517ms
+2023-06-26 15:53:59.506 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:53:59.534 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:54:00.055 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 548.6943ms
+2023-06-26 16:08:02.609 +04:00 [INF] Сервер запущен!
+2023-06-26 16:08:02.692 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 16:08:03.070 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:08:03.073 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:08:03.074 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:08:03.075 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:08:03.076 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:08:03.969 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:08:05.077 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1112.8968ms
+2023-06-26 16:08:05.123 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:08:05.123 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:08:05.139 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 14.1378ms
+2023-06-26 16:08:05.233 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.7849ms
+2023-06-26 16:08:05.433 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:08:05.450 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:08:05.751 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 317.8354ms
+2023-06-26 16:08:33.711 +04:00 [INF] Сервер запущен!
+2023-06-26 16:08:33.786 +04:00 [INF] Sending to  Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 16:08:33.847 +04:00 [WRN] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.EmailSenderLoggingDecorator.SendEmailAsync(String email, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\EmailSenderLoggingDecorator.cs:line 17
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:08:34.098 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:08:34.102 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:08:34.103 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:08:34.104 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:08:34.105 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:08:34.636 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:08:35.251 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 628.8949ms
+2023-06-26 16:08:35.298 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:08:35.309 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:08:35.323 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 24.2449ms
+2023-06-26 16:08:35.454 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 144.9391ms
+2023-06-26 16:08:35.582 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:08:35.616 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:08:36.131 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 549.1329ms
+2023-06-26 16:10:14.857 +04:00 [INF] Сервер запущен!
+2023-06-26 16:10:14.947 +04:00 [INF] Sending to  Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 16:10:15.022 +04:00 [WRN] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.EmailSenderLoggingDecorator.SendEmailAsync(String email, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\EmailSenderLoggingDecorator.cs:line 17
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:10:15.258 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:10:15.262 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:10:15.263 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:10:15.265 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:10:15.265 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:10:15.558 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:10:16.040 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 483.6803ms
+2023-06-26 16:10:16.161 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:10:16.173 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:10:16.183 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 7.6235ms
+2023-06-26 16:10:16.204 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.9213ms
+2023-06-26 16:10:16.308 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:10:16.326 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:10:16.672 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 364.1863ms
+2023-06-26 16:11:05.393 +04:00 [INF] Сервер запущен!
+2023-06-26 16:11:05.530 +04:00 [WRN] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:11:05.850 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:11:05.853 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:11:05.855 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:11:05.855 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:11:05.856 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:11:06.133 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:11:06.740 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 610.3156ms
+2023-06-26 16:11:06.787 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:11:06.787 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:11:06.796 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 8.3339ms
+2023-06-26 16:11:06.848 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.6323ms
+2023-06-26 16:11:07.198 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:11:07.224 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:11:07.570 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 371.4138ms
+2023-06-26 16:12:14.144 +04:00 [INF] Сервер запущен!
+2023-06-26 16:12:14.297 +04:00 [WRN] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:12:14.323 +04:00 [ERR] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:12:14.524 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:12:14.527 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:12:14.529 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:12:14.530 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:12:14.531 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:12:14.864 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:12:15.515 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:12:15.515 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 655.8634ms
+2023-06-26 16:12:15.517 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:12:15.530 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 10.7613ms
+2023-06-26 16:12:15.564 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.6511ms
+2023-06-26 16:12:16.105 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:12:16.206 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:12:16.579 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 474.7840ms
+2023-06-26 16:13:36.915 +04:00 [INF] Сервер запущен!
+2023-06-26 16:13:37.049 +04:00 [WRN] Сообщение не отправлено!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:13:37.076 +04:00 [ERR] Сообщение не отправлено повторно!
+MimeKit.ParseException: No address found.
+   at MimeKit.InternetAddress.TryParse(AddressParserFlags flags, ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Int32 groupDepth, InternetAddress& address)
+   at MimeKit.MailboxAddress.TryParse(ParserOptions options, Byte[] text, Int32& index, Int32 endIndex, Boolean throwOnError, MailboxAddress& mailbox)
+   at MimeKit.MailboxAddress.Parse(ParserOptions options, String text)
+   at MimeKit.MailboxAddress.Parse(String text)
+   at OnlineShopPoc.MailKitSmtpEmailSender.SendEmailAsync(String recepientEmail, String subject, String message) in D:\OnlineShopPoc\OnlineShopPoc\MailKitSmtpEmailSender.cs:line 42
+   at OnlineShopPoc.AppStartedNotificatorBackgroundServer.ExecuteAsync(CancellationToken stoppingToken) in D:\OnlineShopPoc\OnlineShopPoc\AppStartedNotificatorBackgroundServer.cs:line 28
+2023-06-26 16:13:37.261 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:13:37.267 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:13:37.269 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:13:37.270 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:13:37.271 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:13:37.645 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:13:38.330 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 688.5075ms
+2023-06-26 16:13:38.399 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:13:38.475 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.8982ms
+2023-06-26 16:13:38.489 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:13:38.498 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 8.9912ms
+2023-06-26 16:13:39.262 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:13:39.282 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:13:39.533 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 271.3380ms
+2023-06-26 16:14:07.768 +04:00 [INF] Сервер запущен!
+2023-06-26 16:14:08.242 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 16:14:08.250 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 16:14:08.266 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 16:14:08.267 +04:00 [INF] Hosting environment: Development
+2023-06-26 16:14:08.269 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 16:14:08.890 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 16:14:09.741 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 856.4328ms
+2023-06-26 16:14:09.812 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 16:14:09.812 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 16:14:09.824 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 10.1902ms
+2023-06-26 16:14:09.858 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.4716ms
+2023-06-26 16:14:10.154 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 16:14:10.172 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 16:14:10.457 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 302.7864ms

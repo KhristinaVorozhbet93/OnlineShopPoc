@@ -18,6 +18,7 @@
                 await using (var scope = _serviceProvider.CreateAsyncScope())
                 {
                     var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
+
                     await emailSender.SendEmailAsync
                         ("ptykhina.khristi@mail.ru", "Приложение запущено", "Приложение запущено!");
                     await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
@@ -26,3 +27,4 @@
         }
     }
 }
+

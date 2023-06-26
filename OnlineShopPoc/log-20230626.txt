@@ -1,0 +1,46 @@
+2023-06-26 15:20:25.588 +04:00 [INF] Сервер запущен!
+2023-06-26 15:20:25.750 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:20:27.047 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:20:27.114 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:20:27.138 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:20:27.146 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:20:27.148 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:20:29.211 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger - -
+2023-06-26 15:20:29.590 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger - - - 301 0 - 383.1434ms
+2023-06-26 15:20:29.609 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:20:30.166 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 556.0558ms
+2023-06-26 15:20:30.177 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/swagger-ui.css - -
+2023-06-26 15:20:30.178 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/swagger-ui-bundle.js - -
+2023-06-26 15:20:30.179 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:20:30.179 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - -
+2023-06-26 15:20:30.189 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:20:30.213 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 33.7506ms
+2023-06-26 15:20:30.243 +04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-06-26 15:20:30.250 +04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-06-26 15:20:30.305 +04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-06-26 15:20:30.311 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/swagger-ui.css - - - 200 144929 text/css 133.2868ms
+2023-06-26 15:20:30.317 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 138.1875ms
+2023-06-26 15:20:30.333 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 155.0858ms
+2023-06-26 15:20:30.458 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 269.3319ms
+2023-06-26 15:20:30.823 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:20:30.837 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:20:31.210 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 386.2272ms
+2023-06-26 15:24:19.891 +04:00 [INF] Сервер запущен!
+2023-06-26 15:24:20.107 +04:00 [INF] Sending to ptykhina.khristi@mail.ru Subject: Приложение запущено, Message: Приложение запущено!
+2023-06-26 15:24:20.510 +04:00 [INF] Now listening on: https://localhost:7202
+2023-06-26 15:24:20.514 +04:00 [INF] Now listening on: http://localhost:5145
+2023-06-26 15:24:20.515 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-26 15:24:20.516 +04:00 [INF] Hosting environment: Development
+2023-06-26 15:24:20.517 +04:00 [INF] Content root path: D:\OnlineShopPoc\OnlineShopPoc
+2023-06-26 15:24:20.713 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/index.html - -
+2023-06-26 15:24:21.259 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 545.0091ms
+2023-06-26 15:24:21.307 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_vs/browserLink - -
+2023-06-26 15:24:21.307 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 15:24:21.317 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 8.8131ms
+2023-06-26 15:24:21.349 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.7507ms
+2023-06-26 15:24:21.676 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - -
+2023-06-26 15:24:21.691 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7202/swagger/favicon-32x32.png - -
+2023-06-26 15:24:21.698 +04:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-06-26 15:24:21.711 +04:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-06-26 15:24:21.713 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/favicon-32x32.png - - - 200 628 image/png 21.8218ms
+2023-06-26 15:24:21.980 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 304.0417ms

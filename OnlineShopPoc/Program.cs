@@ -1,48 +1,76 @@
 using OnlineShopPoc;
+using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddOptions<SmtpConfig>()
-    .BindConfiguration("SmtpConfig")
-   .ValidateDataAnnotations()
-   .ValidateOnStart();
-builder.Configuration.GetSection("SmtpConfig").Get<SmtpConfig>();
-builder.Services.AddSingleton<ICatalog,InMemoryCatalog>();
-builder.Services.AddSingleton<IClock, Clock>();
-builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
-builder.Services.Decorate<IEmailSender, EmailSenderLoggingDecorator>();
-builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
-//builder.Services.AddHostedService<SalesNotificatorBackgroundService>();
-builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
-   options =>
-   {
-       options.SerializerOptions.WriteIndented = true;
-   });
+Log.Logger = new LoggerConfiguration()
+   .WriteTo.Console()
+   .CreateBootstrapLogger();
+Log.Information("Starting up");
 
-var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
+try
+{
+    var builder = WebApplication.CreateBuilder(args);
+    builder.Host.UseSerilog((_, conf) =>
+    {
+        conf
+            .WriteTo.Console()
+            .WriteTo.File("log-.txt",
+     rollingInterval: RollingInterval.Day)
+        ;
+    });
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+    builder.Services.AddOptions<SmtpConfig>()
+        .BindConfiguration("SmtpConfig")
+       .ValidateDataAnnotations()
+       .ValidateOnStart();
+    builder.Configuration.GetSection("SmtpConfig").Get<SmtpConfig>();
+    builder.Services.AddSingleton<ICatalog, InMemoryCatalog>();
+    builder.Services.AddSingleton<IClock, Clock>();
+    builder.Services.AddScoped<IEmailSender, MailKitSmtpEmailSender>();
+    builder.Services.Decorate<IEmailSender, EmailSenderLoggingDecorator>();
+    builder.Services.AddHostedService<AppStartedNotificatorBackgroundServer>();
+    //builder.Services.AddHostedService<SalesNotificatorBackgroundService>();
+    builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(
+       options =>
+       {
+           options.SerializerOptions.WriteIndented = true;
+       });
 
-//RPC
-app.MapGet("/get_products", GetProducts);
-app.MapPost("/add_product", AddProduct);
-app.MapGet("/get_product", GetProductById);
-app.MapPost("/delete_product", DeleteProduct);
-app.MapPost("/update_product", UpdateProduct);
-app.MapPost("/clear_products", ClearCatalog);
-app.MapGet("/get_date", GetDateUtc);
-app.MapPost("/send_email", SendEmail);
+    var app = builder.Build();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 
-//REST
-app.MapGet("/products", GetProducts);
-app.MapGet("/productById", GetProductById);
-app.MapPost("/products/product", AddProduct);
-app.MapDelete("/products/{productId}", DeleteProduct);
-app.MapPut("/products/{productId}", UpdateProduct);
+    //RPC
+    app.MapGet("/get_products", GetProducts);
+    app.MapPost("/add_product", AddProduct);
+    app.MapGet("/get_product", GetProductById);
+    app.MapPost("/delete_product", DeleteProduct);
+    app.MapPost("/update_product", UpdateProduct);
+    app.MapPost("/clear_products", ClearCatalog);
+    app.MapGet("/get_date", GetDateUtc);
+    app.MapPost("/send_email", SendEmail);
+
+    //REST
+    app.MapGet("/products", GetProducts);
+    app.MapGet("/productById", GetProductById);
+    app.MapPost("/products/product", AddProduct);
+    app.MapDelete("/products/{productId}", DeleteProduct);
+    app.MapPut("/products/{productId}", UpdateProduct);
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Сервер рухнул!");
+}
+finally 
+{
+    Log.Information("Shut down complete");
+    await Log.CloseAndFlushAsync();
+}
 
 
- async Task SendEmail(IEmailSender emailSender, string email, string subject, string message)
+async Task SendEmail(IEmailSender emailSender, string email, string subject, string message)
 {
     ArgumentNullException.ThrowIfNull(email);
     ArgumentNullException.ThrowIfNull(subject);
@@ -82,5 +110,5 @@ DateTime GetDateUtc(IClock clock)
 {
     return clock.GetTimeUtc(); 
 }
-app.Run();
+
 

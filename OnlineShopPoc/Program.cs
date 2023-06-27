@@ -42,11 +42,12 @@ try
 
     //RPC
     app.MapGet("/get_products", GetProducts);
-    app.MapPost("/add_product", AddProduct);
     app.MapGet("/get_product", GetProductById);
+    app.MapPost("/add_product", AddProduct);
     app.MapPost("/delete_product", DeleteProduct);
     app.MapPost("/update_product", UpdateProduct);
     app.MapPost("/clear_products", ClearCatalog);
+
     app.MapGet("/get_date", GetDateUtc);
     app.MapPost("/send_email", SendEmail);
 

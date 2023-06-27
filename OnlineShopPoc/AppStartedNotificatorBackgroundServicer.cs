@@ -13,7 +13,7 @@
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            int attempt = 2;
+            int attemptLimit = 2;
             bool isSend = false;
 
             while (!stoppingToken.IsCancellationRequested)
@@ -21,7 +21,7 @@
                 await using (var scope = _serviceProvider.CreateAsyncScope())
                 {
                     var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
-                    for (int i = 0; i < attempt && isSend == false; i++)
+                    for (int i = 0; i < attemptLimit && isSend == false; i++)
                     {
                         try
                         {

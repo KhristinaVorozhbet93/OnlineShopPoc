@@ -1,13 +1,15 @@
-﻿namespace OnlineShopPoc
+﻿using OnlineShopPoc.Interfaces;
+
+namespace OnlineShopPoc.Decorators
 {
-    public class EmailSenderLoggingDecorator: IEmailSender
+    public class EmailSenderLoggingDecorator : IEmailSender
     {
         private readonly IEmailSender _emailSender;
         ILogger<EmailSenderLoggingDecorator> _logger;
         public EmailSenderLoggingDecorator(IEmailSender emailSender,
             ILogger<EmailSenderLoggingDecorator> logger)
         {
-            _emailSender = emailSender ?? throw new  ArgumentNullException(nameof(emailSender));
+            _emailSender = emailSender ?? throw new ArgumentNullException(nameof(emailSender));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 

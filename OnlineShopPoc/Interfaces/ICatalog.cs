@@ -1,4 +1,6 @@
-﻿namespace OnlineShopPoc
+﻿using OnlineShopPoc.Models;
+
+namespace OnlineShopPoc.Interfaces
 {
     public interface ICatalog
     {

@@ -2,24 +2,25 @@
 using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
+using OnlineShopPoc.Interfaces;
 using System.Net;
 
-namespace OnlineShopPoc
+namespace OnlineShopPoc.Services
 {
     public class MailKitSmtpEmailSender : IEmailSender, IAsyncDisposable
     {
         private readonly SmtpClient _smtpClient = new();
         private readonly SmtpConfig _smtpConfig;
 
-        public MailKitSmtpEmailSender(IOptionsSnapshot <SmtpConfig> options)
+        public MailKitSmtpEmailSender(IOptionsSnapshot<SmtpConfig> options)
         {
-            ArgumentNullException.ThrowIfNull(options); 
-           _smtpConfig= options.Value;
+            ArgumentNullException.ThrowIfNull(options);
+            _smtpConfig = options.Value;
         }
         public async ValueTask DisposeAsync()
         {
             await _smtpClient.DisconnectAsync(true);
-            _smtpClient.Dispose(); 
+            _smtpClient.Dispose();
         }
 
         private async Task EnsureConnectAndAuthenticateAsync()

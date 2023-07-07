@@ -1,13 +1,13 @@
-﻿namespace OnlineShopPoc
+﻿namespace OnlineShopPoc.Models
 {
     public class Product
     {
         public Product(string name, decimal price)
         {
             if (string.IsNullOrEmpty(name)) throw new ArgumentException(nameof(name));
-            if (string.IsNullOrWhiteSpace(name)) throw new NullReferenceException(nameof(name)); 
+            if (string.IsNullOrWhiteSpace(name)) throw new NullReferenceException(nameof(name));
 
-            Name = name; 
+            Name = name;
             Price = price;
         }
         public Guid Id { get; set; }

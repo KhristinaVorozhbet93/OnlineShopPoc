@@ -1,7 +1,8 @@
-﻿using Polly;
+﻿using OnlineShopPoc.Interfaces;
+using Polly;
 using Polly.Retry;
 
-namespace OnlineShopPoc
+namespace OnlineShopPoc.Decorators
 {
     public class EmailSenderRetryDecorator
     {
@@ -15,11 +16,11 @@ namespace OnlineShopPoc
             ILogger<EmailSenderRetryDecorator> logger,
             IConfiguration configuration)
         {
-            _emailSenderImplementation = emailSenderImplementation 
+            _emailSenderImplementation = emailSenderImplementation
                 ?? throw new ArgumentNullException(nameof(emailSenderImplementation));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             if (configuration is null) throw new ArgumentNullException(nameof(configuration));
-            _attemptLimit = configuration.GetValue<int>("SalesEmailAttemptCount"); 
+            _attemptLimit = configuration.GetValue<int>("SalesEmailAttemptCount");
             tokenSource = new CancellationTokenSource();
 
             _policy = Policy
@@ -29,7 +30,7 @@ namespace OnlineShopPoc
                                     onRetry: (exception, sleepDuration, attemptNumber) =>
                                     {
                                         _logger.LogWarning(exception,
-                                    "Ошибка! Сообщение отправить повторно через {SleepDuration}.Попытка номер: {RetryCount}.", sleepDuration, attemptNumber, );
+                                    "Ошибка! Сообщение отправить повторно через {SleepDuration}.Попытка номер: {RetryCount}.", sleepDuration, attemptNumber);
                                     });
 
         }
@@ -37,7 +38,7 @@ namespace OnlineShopPoc
         public async Task SendEmailAsync(string recepientEmail, string subject, string message)
         {
             var sendResult = await _policy!.ExecuteAndCaptureAsync(
-                _ => _emailSenderImplementation.SendEmailAsync(recepientEmail, subject, message),tokenSource.Token);
+                _ => _emailSenderImplementation.SendEmailAsync(recepientEmail, subject, message), tokenSource.Token);
 
             if (sendResult.Outcome == OutcomeType.Failure)
             {

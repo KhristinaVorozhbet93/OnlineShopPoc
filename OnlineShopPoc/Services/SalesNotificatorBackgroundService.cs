@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
+using OnlineShopPoc.Interfaces;
 
-namespace OnlineShopPoc
+namespace OnlineShopPoc.Services
 {
     public class SalesNotificatorBackgroundService : BackgroundService
     {

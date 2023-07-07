@@ -1,4 +1,7 @@
-﻿namespace OnlineShopPoc
+﻿using OnlineShopPoc.Interfaces;
+using OnlineShopPoc.Models;
+
+namespace OnlineShopPoc.Data
 {
     public class InMemoryCatalog : ICatalog
     {
@@ -24,7 +27,7 @@
                     for (int i = 0; i < _products.Count; i++)
                     {
                         salesProducts.Add(new Product(_products[i].Name,
-                            Math.Floor(_products[i].Price - (_products[i].Price / 100 * 30)))
+                            Math.Floor(_products[i].Price - _products[i].Price / 100 * 30))
                         {
                             Id = _products[i].Id,
                             Description = _products[i].Description,
@@ -65,7 +68,7 @@
                         lock (_productsSyncObj)
                         {
                             Product saleProduct = new Product(_products[i].Name,
-                                Math.Floor(_products[i].Price - (_products[i].Price / 100 * 30)))
+                                Math.Floor(_products[i].Price - _products[i].Price / 100 * 30))
                             {
                                 Id = _products[i].Id,
                                 Description = _products[i].Description,

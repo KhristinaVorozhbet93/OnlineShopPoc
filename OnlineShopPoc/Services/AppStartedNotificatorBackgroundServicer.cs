@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
+using OnlineShopPoc.Interfaces;
 
-namespace OnlineShopPoc
+namespace OnlineShopPoc.Services
 {
     public class AppStartedNotificatorBackgroundServer : BackgroundService
     {
@@ -20,7 +21,7 @@ namespace OnlineShopPoc
             {
                 await using (var scope = _serviceProvider.CreateAsyncScope())
                 {
-                    var email = "ptykhina.khristi@mail.ru"; 
+                    var email = "ptykhina.khristi@mail.ru";
                     var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
 
                     await emailSender.SendEmailAsync(email, "Промоакции", "Список акций");

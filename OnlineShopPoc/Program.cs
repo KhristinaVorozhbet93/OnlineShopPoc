@@ -1,4 +1,8 @@
 using OnlineShopPoc;
+using OnlineShopPoc.Data;
+using OnlineShopPoc.Interfaces;
+using OnlineShopPoc.Models;
+using OnlineShopPoc.Services;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
